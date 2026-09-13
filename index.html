@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happiest BIRTHDAYYY everrrrrr Aman! 🎂✨</title>
+  <meta name="description" content="A cute, fun, and heartfelt digital birthday card website created especially for Aman." />
+
+  <!-- Google Fonts: Fredoka (Rounded/Playful) & Caveat (Handwritten/Accents) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Fredoka:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Fullscreen Canvas for Confetti & Particle Effects -->
+  <canvas id="confetti-canvas"></canvas>
+
+  <!-- Interactive Desktop Sparkle Glow Canvas -->
+  <canvas id="sparkle-canvas"></canvas>
+
+  <!-- Top Progress Indicator Bar -->
+  <div class="progress-container" title="Birthday Navigation Progress">
+    <div class="progress-bar" id="progress-bar"></div>
+    <div class="progress-icons">
+      <span class="icon-dot active">🎂</span>
+      <span class="icon-dot">🎁</span>
+      <span class="icon-dot">🎈</span>
+      <span class="icon-dot">🫶</span>
+      <span class="icon-dot">✨</span>
+      <span class="icon-dot">🎁</span>
+      <span class="icon-dot">📊</span>
+      <span class="icon-dot">🥳</span>
+      <span class="icon-dot">💙</span>
+    </div>
+  </div>
+
+  <!-- Background Decorative Floating Elements -->
+  <div class="floating-decorations-bg" aria-hidden="true">
+    <div class="floating-balloon balloon-1">🎈</div>
+    <div class="floating-balloon balloon-2">🎈</div>
+    <div class="floating-balloon balloon-3">🎈</div>
+    <div class="floating-balloon balloon-4">🎈</div>
+    <div class="floating-star star-1">✦</div>
+    <div class="floating-star star-2">✧</div>
+    <div class="floating-star star-3">✨</div>
+    <div class="floating-star star-4">✦</div>
+    <div class="floating-cloud cloud-1">☁️</div>
+    <div class="floating-cloud cloud-2">☁️</div>
+  </div>
+
+  <!-- Toast / Popups Container -->
+  <div id="toast-container" class="toast-container"></div>
+
+  <!-- MAIN CONTENT CONTAINER -->
+  <main class="app-container">
+
+    <!-- ==========================================
+         SECTION 1: THE BIRTHDAY INTRO
+         ========================================== -->
+    <section id="hero" class="section hero-section reveal">
+      <div class="hero-badge">
+        <div class="mini-cake-css">
+          <div class="mini-flame"></div>
+          <div class="mini-candle"></div>
+          <div class="mini-base">🎂</div>
+        </div>
+      </div>
+
+      <p class="greeting-subtitle">Helllooooo <span class="highlight-name">AMANNN</span>!! 👀</p>
+      
+      <h1 class="main-heading">
+        Happiest<br />
+        BIRTHDAYYY<br />
+        <span id="hero-name-click" class="interactive-name" title="Click me!">everrrrrr 🎂</span>
+      </h1>
+
+      <div class="hero-text-card">
+        <p class="hero-line1">sooo... another year of you being you nd obvio me being me😭</p>
+        <p class="hero-line2">but dw, you're still my favourite idiot. 😂</p>
+      </div>
+
+      <button id="btn-hero-present" class="cute-btn primary-btn bounce-hover">
+        🎁 OPEN YOUR PRESENT
+      </button>
+
+      <div class="scroll-indicator">
+        <span>okay now scroll down</span>
+        <span class="arrow-down">↓</span>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SECTION 2: "I MADE YOU SOMETHING"
+         ========================================== -->
+    <section id="note" class="section note-section reveal">
+      <div class="doodle-card handwritten-note">
+        <div class="tape tape-tl"></div>
+        <div class="tape tape-tr"></div>
+        
+        <h2 class="handwritten-title">okay wait... 📝</h2>
+
+        <p class="handwritten-text">
+          okay so this obviously isn't an actual present 😭 but I still wanted to make you something. so... here's your own tiny corner of the internet ig.
+        </p>
+
+        <p class="handwritten-text highlight-quote">
+          "because apparently just saying 'hbd ' wasn't enough this year 😂"
+        </p>
+
+        <div class="doodle-accent">
+          <svg width="60" height="40" viewBox="0 0 60 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M5 20C15 5 45 5 55 20C45 35 15 35 5 20Z" stroke="#3B82F6" stroke-width="3" stroke-linecap="round"/>
+            <circle cx="30" cy="20" r="6" fill="#3B82F6"/>
+          </svg>
+        </div>
+
+        <button id="btn-note-continue" class="cute-btn secondary-btn">
+          okay now continue →
+        </button>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SECTION 3: "THINGS THAT ARE VERY AMAN"
+         ========================================== -->
+    <section id="traits" class="section traits-section reveal">
+      <div class="section-header">
+        <h2 class="section-title">things that are VERY aman ✨</h2>
+        <p class="section-subtitle">(source: trust me bro, I conducted the research myself)</p>
+      </div>
+
+      <div class="stickers-grid">
+        <div class="sticker-card tilt-left" data-index="1">
+          <span class="sticker-num">01</span>
+          <p class="sticker-text">the random ass conversations</p>
+          <p class="sticker-subtext" style="font-size: 0.95rem; color: #475569; margin-top: 4px; font-weight: normal;">how tf do our conversations go from something completely normal to the most random topic ever 😭</p>
+          <span class="sticker-emoji">💬</span>
+        </div>
+
+        <div class="sticker-card tilt-right" data-index="2">
+          <span class="sticker-num">02</span>
+          <p class="sticker-text">your timing 😂</p>
+          <p class="sticker-subtext" style="font-size: 0.95rem; color: #475569; margin-top: 4px; font-weight: normal;">you'll say the most unserious thing at exactly the moment I need it and somehow make everything 10x better.</p>
+          <span class="sticker-emoji">😂</span>
+        </div>
+
+        <div class="sticker-card tilt-left-alt" data-index="3">
+          <span class="sticker-num">03</span>
+          <p class="sticker-text">being annoying</p>
+          <p class="sticker-subtext" style="font-size: 0.95rem; color: #475569; margin-top: 4px; font-weight: normal;">you're genuinely annoying sometimes. like genuinely. but unfortunately I've gotten too used to it now.</p>
+          <span class="sticker-emoji">😜</span>
+        </div>
+
+        <div class="sticker-card tilt-right-alt" data-index="4">
+          <span class="sticker-num">04</span>
+          <p class="sticker-text">actually being there</p>
+          <p class="sticker-subtext" style="font-size: 0.95rem; color: #475569; margin-top: 4px; font-weight: normal;">jokes aside, this one matters. you're one of the people I know I can actually come to when things get fucked up.</p>
+          <span class="sticker-emoji">💙</span>
+        </div>
+
+        <div class="sticker-card tilt-left" data-index="5">
+          <span class="sticker-num">05</span>
+          <p class="sticker-text">the stupid jokes</p>
+          <p class="sticker-subtext" style="font-size: 0.95rem; color: #475569; margin-top: 4px; font-weight: normal;">half the things we laugh at aren't even funny anymore but somehow they're still funny to us 😭</p>
+          <span class="sticker-emoji">😭</span>
+        </div>
+
+        <div class="sticker-card tilt-right" data-index="6">
+          <span class="sticker-num">06</span>
+          <p class="sticker-text">almost 9 YEARS??</p>
+          <p class="sticker-subtext" style="font-size: 0.95rem; color: #475569; margin-top: 4px; font-weight: normal;">like actually how has it been almost 9 years??? that's insane. we've literally grown up through all of this.</p>
+          <span class="sticker-emoji">🥹</span>
+        </div>
+
+        <div class="sticker-card tilt-left-alt" data-index="7" style="grid-column: span 2;">
+          <span class="sticker-num">07</span>
+          <p class="sticker-text">just... you</p>
+          <p class="sticker-subtext" style="font-size: 0.95rem; color: #475569; margin-top: 4px; font-weight: normal;">there's honestly not one specific reason. you're just one of those people I'm really, really glad I have.</p>
+          <span class="sticker-emoji">✨</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SECTION 4: "BUT SERIOUSLY..."
+         ========================================== -->
+    <section id="heartfelt" class="section heartfelt-section reveal">
+      <div class="heartfelt-card">
+        <div class="star-decor star-top-left">✨</div>
+        <div class="star-decor star-top-right">✦</div>
+        <div class="star-decor star-bottom-right">✧</div>
+
+        <h2 class="heartfelt-title">okay, jokes aside... 🫶</h2>
+
+        <div class="typewriter-container">
+          <p class="heartfelt-paragraph">
+            Aman,<br /><br />
+            I genuinely don't think I say this enough, but tu genuinely mere lie bht important hai.<br /><br />
+            Like... almost 9 years. NINE. 😭<br /><br />
+            I actually can't believe it's been that long. We've literally seen so many versions of each other at this point. We've grown up together, changed, fucked up, laughed over the dumbest things, had stupid arguments, had random ass conversations and somehow we're still here.<br /><br />
+            And yk what I think I appreciate the most?<br /><br />
+            No matter how fucked up I am or how badly everything is going, you're one of the people I automatically end up coming to. Even when I don't really know what to say or what I even need, somehow talking to you just makes things feel a little less heavy.<br /><br />
+            And I genuinely hope you know that I don't take that for granted.<br /><br />
+            You've been there for me in ways you probably don't even realise, and I'm really really grateful for that.<br /><br />
+            I hope this year is SO good to you. Like genuinely.<br /><br />
+            I hope you get everything you've been working for, I hope things fall into place for you, I hope you meet the right people, make the best memories and get to do all the things you actually want to do.<br /><br />
+            You deserve the best, Aman. Genuinely.<br /><br />
+            You deserve the world and I really hope life gives you a lot more than you even expect.<br /><br />
+            And no matter how old we get, I hope we still have this stupid friendship where we can talk absolute nonsense one minute and then have an actual serious conversation the next 😂<br /><br />
+            Anywayyy...<br /><br />
+            happy birthday. 🫶<br /><br />
+            <strong>I'm really, really glad it's you.</strong>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SECTION 5: "A LITTLE BIRTHDAY WISH"
+         ========================================== -->
+    <section id="wish" class="section wish-section reveal">
+      <div class="wish-card">
+        <h2 class="wish-title">make a wish ✨</h2>
+        <p class="wish-subtitle">okay ab candles blow kar 😭</p>
+
+        <!-- Interactive CSS Birthday Cake -->
+        <div class="interactive-cake-wrapper">
+          <div class="cake-stage" id="cake-stage">
+            <div class="candles-row">
+              <div class="candle candle-1" data-candle="1">
+                <div class="flame"></div>
+                <div class="wick"></div>
+                <div class="stick"></div>
+              </div>
+              <div class="candle candle-2" data-candle="2">
+                <div class="flame"></div>
+                <div class="wick"></div>
+                <div class="stick"></div>
+              </div>
+              <div class="candle candle-3" data-candle="3">
+                <div class="flame"></div>
+                <div class="wick"></div>
+                <div class="stick"></div>
+              </div>
+            </div>
+            <div class="cake-layer top-layer">
+              <div class="icing-drips"></div>
+            </div>
+            <div class="cake-layer middle-layer"></div>
+            <div class="cake-layer bottom-layer"></div>
+            <div class="cake-plate"></div>
+          </div>
+        </div>
+
+        <!-- Wish Sent Box Reveal -->
+        <div id="wish-result" class="wish-result hidden">
+          <h3 class="wish-sent-text">wish sent ✨</h3>
+          <p class="wish-sent-subtext">ab dekhte hain wish puri hoti hai ya nahi 👀</p>
+          <button id="btn-relight" class="cute-btn alt-btn mt-4">
+            🔥 relight candles & make another wish
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SECTION 6: LITTLE SURPRISE BOXES
+         ========================================== -->
+    <section id="surprises" class="section surprises-section reveal">
+      <div class="section-header">
+        <h2 class="section-title">thoda sa aur bakchodi 🎁</h2>
+        <p class="section-subtitle">(obviously click all of them)</p>
+      </div>
+
+      <div class="gift-boxes-grid">
+        <!-- Box 1 -->
+        <div class="gift-box-item" data-box="1">
+          <div class="css-gift-box">
+            <div class="gift-lid">
+              <div class="gift-bow"></div>
+            </div>
+            <div class="gift-body">
+              <div class="gift-ribbon-v"></div>
+              <div class="gift-ribbon-h"></div>
+            </div>
+          </div>
+          <button class="gift-label-btn">OPEN KAR 👀</button>
+        </div>
+
+        <!-- Box 2 -->
+        <div class="gift-box-item" data-box="2">
+          <div class="css-gift-box color-alt1">
+            <div class="gift-lid">
+              <div class="gift-bow"></div>
+            </div>
+            <div class="gift-body">
+              <div class="gift-ribbon-v"></div>
+              <div class="gift-ribbon-h"></div>
+            </div>
+          </div>
+          <button class="gift-label-btn">OPEN THIS ONE</button>
+        </div>
+
+        <!-- Box 3 -->
+        <div class="gift-box-item" data-box="3">
+          <div class="css-gift-box color-alt2">
+            <div class="gift-lid">
+              <div class="gift-bow"></div>
+            </div>
+            <div class="gift-body">
+              <div class="gift-ribbon-v"></div>
+              <div class="gift-ribbon-h"></div>
+            </div>
+          </div>
+          <button class="gift-label-btn">okay this one's actually important 🫶</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Modal for Gift Box Messages -->
+    <div id="gift-modal" class="modal-overlay hidden">
+      <div class="modal-card">
+        <button id="modal-close" class="modal-close-btn">&times;</button>
+        <div class="modal-icon">🎁</div>
+        <h3 id="modal-title" class="modal-title">SURPRISE!</h3>
+        <p id="modal-message" class="modal-message"></p>
+        <button id="modal-ok-btn" class="cute-btn primary-btn mt-4">Aww, got it! 😄</button>
+      </div>
+    </div>
+
+    <!-- ==========================================
+         SECTION 7: "YOUR OFFICIAL BIRTHDAY STATS"
+         ========================================== -->
+    <section id="stats" class="section stats-section reveal">
+      <div class="stats-card">
+        <h2 class="stats-title">AMAN'S VERY IMPORTANT BIRTHDAY STATS 📊</h2>
+        <p class="stats-subtitle">(researched by me. so obviously 100% accurate.)</p>
+
+        <div class="stats-list">
+
+          <div class="stat-item">
+            <div class="stat-header">
+              <span class="stat-label">CHAOS 💥</span>
+              <span class="stat-value" data-target="97">0%</span>
+            </div>
+            <div class="stat-bar-bg">
+              <div class="stat-bar-fill fill-chaos" style="width: 0%;"></div>
+            </div>
+          </div>
+
+          <div class="stat-item">
+            <div class="stat-header">
+              <span class="stat-label">COMEBACKS ⚡</span>
+              <span class="stat-value" data-target="91">0%</span>
+            </div>
+            <div class="stat-bar-bg">
+              <div class="stat-bar-fill fill-comebacks" style="width: 0%;"></div>
+            </div>
+          </div>
+
+          <div class="stat-item">
+            <div class="stat-header">
+              <span class="stat-label">STUBBORNNESS 😤</span>
+              <span class="stat-value" data-target="100">0%</span>
+            </div>
+            <div class="stat-bar-bg">
+              <div class="stat-bar-fill fill-stubbornness" style="width: 0%;"></div>
+            </div>
+          </div>
+
+          <div class="stat-item">
+            <div class="stat-header">
+              <span class="stat-label">FUN 🎉</span>
+              <span class="stat-value" data-target="99">0%</span>
+            </div>
+            <div class="stat-bar-bg">
+              <div class="stat-bar-fill fill-fun" style="width: 0%;"></div>
+            </div>
+          </div>
+
+          <div class="stat-item">
+            <div class="stat-header">
+              <span class="stat-label">ANNOYING 😭</span>
+              <span class="stat-value" data-target="101">0%</span>
+            </div>
+            <div class="stat-bar-bg">
+              <div class="stat-bar-fill fill-annoying" style="width: 0%;"></div>
+            </div>
+          </div>
+
+          <div class="stat-item highlight-stat">
+            <div class="stat-header">
+              <span class="stat-label">BEST-FRIEND LEVEL 🫡</span>
+              <span class="stat-value" data-target="1000">0%</span>
+            </div>
+            <div class="stat-bar-bg">
+              <div class="stat-bar-fill fill-bestfriend" style="width: 0%;"></div>
+            </div>
+          </div>
+
+        </div>
+
+        <p class="stats-disclaimer">* results may or may not be biased because I conducted this study myself.</p>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SECTION 8: BIRTHDAY CAKE MOMENT
+         ========================================== -->
+    <section id="cake-moment" class="section cake-moment-section reveal">
+      <div class="cake-moment-card">
+        <div class="big-cake-illustration">
+          <div class="grand-cake">
+            <div class="candle-spark">✨</div>
+            <div class="grand-flame"></div>
+            <div class="grand-candle"></div>
+            <div class="grand-top-tier">🎂</div>
+          </div>
+        </div>
+
+        <p class="cake-pre-text">okayyy one last thing...</p>
+        <p class="cake-pre-text-sub">before you go...</p>
+
+        <h2 class="cake-main-quote">
+          "bas ek cheez yaad rakhna — tu genuinely bht important hai. not just to me, but to the people around you too."
+        </h2>
+
+        <p class="cake-signature-highlight">including me obviously, idiot. 😂✨</p>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SECTION 9: THE FINAL SURPRISE
+         ========================================== -->
+    <section id="chaos" class="section chaos-section reveal">
+      <div class="chaos-wrapper">
+        <button id="btn-chaos" class="chaos-btn pulse-glow">
+          🎉 OKAY PRESS THIS
+        </button>
+
+        <div id="chaos-reveal" class="chaos-reveal-card hidden">
+          <h2 class="chaos-headline">HAPPY BIRTHDAY AMANNN!!! 🎂🎉</h2>
+          
+          <p class="chaos-body">
+            here's to another year of stupid jokes, random conversations, questionable decisions and making memories that we'll probably randomly bring up 10 years from now and start laughing again 😂
+          </p>
+
+          <p class="chaos-punchline">
+            bas aisa hi rehna. thoda pagal, thoda annoying, but always you. 🫶
+          </p>
+
+          <div class="chaos-doodle-row">
+            <span>🎈</span><span>🎂</span><span>✨</span><span>🥳</span><span>🎁</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         FINAL SECTION / FOOTER
+         ========================================== -->
+    <footer id="footer" class="section footer-section reveal">
+      <div class="footer-card">
+        <h2 class="footer-title">happy birthday, aman. 🤍</h2>
+        
+        <p class="footer-subtext">
+          i really hope this year is everything you want it to be. you deserve the absolute best, genuinely.
+        </p>
+
+        <p id="config-signature" class="footer-signature">— your favourite headache, obviously 😂</p>
+
+        <div class="footer-divider"></div>
+
+        <p class="footer-effort">
+          made with way too much effort for someone I could've just texted 'hbd bro' to 😭
+        </p>
+
+        <div class="footer-easter-egg">
+          <span id="easter-egg-psst" class="psst-link">psst... 👀</span>
+        </div>
+
+        <div class="tiny-stars-row">
+          ✦ ✧ ✨ ✦ ✧ ✨ ✦
+        </div>
+      </div>
+    </footer>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
